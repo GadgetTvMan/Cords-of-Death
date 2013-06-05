@@ -1,0 +1,16 @@
+author: GadgetTvMan
+name: Cords of Death
+main: gadgettvman.github.io.CordsofDeath.CordsOfDeath
+version: 1.0.0
+
+url: http://gadgettvman.github.io/Cords-of-Death/
+startup: postworld
+
+permissions:
+  CordsOfDeath.*:
+    description: Gives access to all permission nodes
+    children:
+      CordsOfDeath.sendCordsOnDeath: true
+  CordsOfDeath.sendCordsOnDeath:
+    description: Sends player their death cords on death. Defaults to enabled
+    default: true
