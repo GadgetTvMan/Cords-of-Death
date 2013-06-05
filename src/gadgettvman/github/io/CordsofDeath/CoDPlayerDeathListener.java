@@ -4,6 +4,7 @@
  */
 package gadgettvman.github.io.CordsofDeath;
 
+import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.Listener;
@@ -19,7 +20,7 @@ public class CoDPlayerDeathListener implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event){
         Player player = event.getEntity();
-        String playerName = player.getDisplayName();
+        String playerName = ChatColor.stripColor(player.getDisplayName());
         int playerDeathX = player.getLocation().getBlockX();
         int playerDeathY = player.getLocation().getBlockY();
         int playerDeathZ = player.getLocation().getBlockZ();
